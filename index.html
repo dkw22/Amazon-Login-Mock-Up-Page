@@ -4,9 +4,16 @@
 	<meta charset="utf-8">
 	<meta name="author" content="Kodinger">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>My Login Page</title>
+	<title>Amazon Login Page</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/my-login.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 </head>
 
 <body class="my-login-page">
@@ -15,15 +22,15 @@
 			<div class="row justify-content-md-center h-100">
 				<div class="card-wrapper">
 					<div class="brand">
-						<img src="img/logo.jpg" alt="logo">
+						<img src="img/amazon_logo.jpg" alt="amazon logo">
 					</div>
 					<div class="card fat">
 						<div class="card-body">
-							<h4 class="card-title">Login</h4>
-							<form method="POST" class="my-login-validation" novalidate="">
+							<h4 class="card-title">Sign In</h4>
+							<form method="POST" class="my-login-validation" novalidate="" autocomplete="on">
 								<div class="form-group">
-									<label for="email">E-Mail Address</label>
-									<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+									<label for="email">Email(phone or mobile accounts)</label>
+									<input id="email" type="email" class="form-control" name="email" value="" placeholder="Enter Email" required autofocus>
 									<div class="invalid-feedback">
 										Email is invalid
 									</div>
@@ -31,36 +38,62 @@
 
 								<div class="form-group">
 									<label for="password">Password
-										<a href="forgot.html" class="float-right">
-											Forgot Password?
+										<a href="https://www.amazon.com/ap/forgotpassword?showRememberMe=true&openid.pape.max_auth_age=0&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&pageId=usflex&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fyourstore%2Fhome%3Fie%3DUTF8%26action%3Dsign-out%26path%3D%252Fgp%252Fyourstore%252Fhome%26ref_%3Dnav_AccountFlyout_signout%26signIn%3D1%26useRedirectOnSuccess%3D1&prevRID=G76YNVSWYKWYARJRV21H&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&prepopulatedLoginId=&failedSignInCount=0&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0" class="float-right">
+											Forgot Password
 										</a>
 									</label>
-									<input id="password" type="password" class="form-control" name="password" required data-eye>
+									<input id="password" type="password" class="form-control" name="password" placeholder="Enter Password" required data-eye>
 								    <div class="invalid-feedback">
 								    	Password is required
 							    	</div>
 								</div>
 
-								<div class="form-group">
-									<div class="custom-checkbox custom-control">
-										<input type="checkbox" name="remember" id="remember" class="custom-control-input">
-										<label for="remember" class="custom-control-label">Remember Me</label>
+								<div class="form-group m-0">
+									<button type="submit" class="btn btn-primary btn-block">
+										Continue
+									</button>
+								</div>
+
+								<div class="dropdown">
+									<p onclick="myFunction()" class="dropbtn">&#8250; Need Help?</p>
+									<div id="myDropdown" class="dropdown-content">
+										<a href="https://www.amazon.com/ap/forgotpassword?showRememberMe=true&openid.pape.max_auth_age=0&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&pageId=usflex&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fyourstore%2Fhome%3Fie%3DUTF8%26action%3Dsign-out%26path%3D%252Fgp%252Fyourstore%252Fhome%26ref_%3Dnav_AccountFlyout_signout%26signIn%3D1%26useRedirectOnSuccess%3D1&prevRID=G76YNVSWYKWYARJRV21H&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&prepopulatedLoginId=&failedSignInCount=0&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0" class="float-left">
+											Forgot your password? 
+										</a>
+										<a href="https://www.amazon.com/gp/help/customer/account-issues/ref=ap_login_with_otp_claim_collection?ie=UTF8" class="float-left">
+											Other issues with Sign-In
+										</a>
 									</div>
 								</div>
 
-								<div class="form-group m-0">
-									<button type="submit" class="btn btn-primary btn-block">
-										Login
-									</button>
-								</div>
-								<div class="mt-4 text-center">
-									Don't have an account? <a href="register.html">Create One</a>
 								</div>
 							</form>
 						</div>
-					</div>
-					<div class="footer">
-						Copyright &copy; 2017 &mdash; Your Company 
+						<div class="mt-4 text-center">
+							<p class="register-account"><span>New To Amazon?</span></p>
+							<div class="register" >
+								<form action="https://www.amazon.com/ap/register?clientContext=130-1934215-8494831&openid.return_to=https%3A%2F%2Ftrack.amazon.com%2F&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amzn_shippingrecipientcentral_us&openid.mode=checkid_setup&marketPlaceId=A2BR6UVHX99FEC&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&pageId=amzn_shippingrecipientcentral_us_amazon&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&siteState=clientContext%3D147-0212427-0751148%2CsourceUrl%3Dhttps%253A%252F%252Ftrack.amazon.com%252F%2Csignature%3DBhp6b6Ou3UoKCcdggj2BfqF5qUlPYj3D" target="_blank">
+									<button type="submit" value="Create Your Amazon Account" id="register-button" class="btn btn-primary btn-block">
+										Create Your Amazon Account 
+									</button>
+								</form>								
+							</div>
+						</div>
+						<div class="footer">
+							<span class="footer-links">
+								<a href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_desktop_footer_cou?ie=UTF8&nodeId=508088">
+									Conditions of Use
+								</a>
+								<a href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_desktop_footer_privacy_notice?ie=UTF8&nodeId=468496">
+									Privacy Policy
+								</a>
+								<a href="https://www.amazon.com/gp/help/customer/display.html">
+									Help
+								</a>
+							</span>
+							<br/>
+							&copy; 1996-2020, Amazon.com,inc or it's affiliates 
+						</div>
 					</div>
 				</div>
 			</div>

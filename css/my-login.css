@@ -3,7 +3,7 @@ html,body {
 }
 
 body.my-login-page {
-	background-color: #f7f9fb;
+	background-color: #ffffff;
 	font-size: 14px;
 }
 
@@ -27,8 +27,7 @@ body.my-login-page {
 }
 
 .my-login-page .card {
-	border-color: transparent;
-	box-shadow: 0 4px 8px rgba(0,0,0,.05);
+	border-color: #dfdfdf;
 }
 
 .my-login-page .card.fat {
@@ -47,14 +46,76 @@ body.my-login-page {
 	width: 100%;
 }
 
+.form-group a:hover {
+	color : #d58f55;
+}
+
 .my-login-page .btn.btn-block {
 	padding: 12px 10px;
+	background-color: #f4d27e;
+	border-color: #cab785;
+	color: black;
+}
+
+.register-account {
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid #000;
+	line-height: 0.1em;
+	margin: 10px 0 20px;
+}
+
+.register-account span {
+	background: #fff;
+	padding: 0 10px;
+}
+
+.register{
+	color: #000;
 }
 
 .my-login-page .footer {
 	margin: 40px 0;
 	color: #888;
 	text-align: center;
+}
+
+.footer-links a {
+	padding: 0 0 10px 20px;
+}
+
+.dropbtn {
+	cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+	color: #d58f55;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	margin-left: 15px;
+	color: #1a73e8;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	width: 200px;
+	overflow: visible;
+	border: none;
+}
+
+.dropdown-content a:hover {color: #d58f55}
+
+.show {display: block;}
+
+#register-button {
+	background-color: #e7e9ec;
+	border-color: #d3d6da;
 }
 
 @media screen and (max-width: 425px) {
